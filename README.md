@@ -18,7 +18,9 @@ Legacy subreddit subdomains are converted to `/r/<subreddit>` paths.
 
 ## How it works
 
-The extension uses a static `declarativeNetRequest` rule. It only changes top-level page navigations, and excludes `old.reddit.com` to prevent redirect loops.
+The extension uses static `declarativeNetRequest` rules. It only changes top-level page navigations, and excludes `old.reddit.com` to prevent redirect loops.
+
+For direct `i.redd.it` image navigations, it requests the image itself instead of Reddit's incompatible `/media` wrapper.
 
 ## Files
 

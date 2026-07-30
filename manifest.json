@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Old Reddit Redirect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Redirects Reddit pages to old.reddit.com.",
   "icons": {
     "16": "icons/icon-16.png",
@@ -23,7 +23,8 @@
   ],
   "host_permissions": [
     "*://*.reddit.com/*",
-    "*://reddit.com/*"
+    "*://reddit.com/*",
+    "*://i.redd.it/*"
   ],
   "declarative_net_request": {
     "rule_resources": [

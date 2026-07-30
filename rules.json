@@ -1,5 +1,27 @@
 [
   {
+    "id": 3,
+    "priority": 3,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "accept",
+          "operation": "set",
+          "value": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"
+        }
+      ]
+    },
+    "condition": {
+      "requestDomains": [
+        "i.redd.it"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
     "id": 1,
     "priority": 2,
     "action": {
