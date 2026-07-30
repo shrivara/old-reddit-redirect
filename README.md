@@ -20,7 +20,7 @@ Legacy subreddit subdomains are converted to `/r/<subreddit>` paths.
 
 The extension uses static `declarativeNetRequest` rules. It only changes top-level page navigations, and excludes `old.reddit.com` to prevent redirect loops.
 
-For direct `i.redd.it` image navigations, it requests the image itself instead of Reddit's incompatible `/media` wrapper.
+For direct `i.redd.it` image navigations, it requests the image itself instead of Reddit's incompatible `/media` wrapper. Gallery links fall back to Reddit's modern post page because Old Reddit does not support galleries.
 
 ## Files
 
