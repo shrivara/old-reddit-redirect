@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://old.reddit.com/r/\\1/\\2"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://([a-z0-9_]+)\\.reddit\\.com/(.*)$",
+      "excludedRequestDomains": [
+        "www.reddit.com",
+        "old.reddit.com",
+        "new.reddit.com",
+        "np.reddit.com",
+        "m.reddit.com"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "scheme": "https",
+          "host": "old.reddit.com"
+        }
+      }
+    },
+    "condition": {
+      "requestDomains": [
+        "reddit.com"
+      ],
+      "excludedRequestDomains": [
+        "old.reddit.com"
+      ],
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  }
+]
